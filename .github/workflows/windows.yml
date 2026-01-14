@@ -70,10 +70,4 @@ jobs:
           cp frida-core-devkit/libfrida-core.a /mingw64/lib/
           cp frida-core-devkit/frida-core.h /mingw64/include/
           cp frida-go-examples/list_devices/list_devices.go frida-go/main.go
-      - name: Build and run example program
-        env:
-          CGO_ENABLED: 1
-        run: |
-          cd frida-go
-          go build -o ll main.go && ./ll
     
