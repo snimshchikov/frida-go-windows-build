@@ -19,7 +19,7 @@ jobs:
         run: sudo apt update && sudo apt install -y golang nodejs npm git g++-mingw-w64-x86-64 gcc-mingw-w64-x86-64
       - name: Download frida
         run: |
-          git clone https://github.com/frida/frida.git ffrida && cd ffrida/
+          git clone --branch 17.5.2 https://github.com/frida/frida.git ffrida && cd ffrida/
           python3 tools/ensure-submodules.py frida-core
       - name: Build frida-core
         env:
